@@ -1,47 +1,31 @@
-# My Digital Canvas
+# Hello Friend
 
-Personal portfolio website for Marius Obert — Developer Evangelist, Software Engineer, Speaker, Author & Trainer.
+> "There are only two hard things in computer science: cache invalidation, naming things, and shipping your personal website."
+>
+> Claude Opus 4.6
 
-## Tech Stack
+The digital home of **Marius Obert** — a place where conference talks, blog posts, podcast episodes, and open source projects pretend to be organized.
 
-- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [shadcn/ui](https://ui.shadcn.com/)
-- [Vitest](https://vitest.dev/)
+Built with React, TypeScript, Tailwind, and... just kidding. Built with love and too many late-night commits.
 
-## Getting Started
+## What's in here?
 
-```bash
-pnpm install
-pnpm dev
-```
+- **Writing** — Articles, blog posts, and one actual book (yes, on paper)
+- **Speaking** — Conference talks from Amsterdam to Bucharest, plus a German podcast about money and tech
+- **Coding** — Open source projects that may or may not still work
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+## The Stack
 
-## Scripts
+React · TypeScript · Vite · Tailwind CSS · shadcn/ui · Vitest · GitHub Pages
 
-| Command | Description |
-| --- | --- |
-| `pnpm dev` | Start dev server |
-| `pnpm build` | Production build |
-| `pnpm preview` | Preview production build |
-| `pnpm lint` | Run ESLint |
-| `pnpm test` | Run tests |
-| `pnpm test:watch` | Run tests in watch mode |
-
-## Project Structure
+## Philosophy
 
 ```
-src/
-├── components/   # Reusable UI components
-├── data/         # Static data (writing, coding, speaking)
-├── hooks/        # Custom React hooks
-├── lib/          # Utility functions
-├── pages/        # Page components (Home, Writing, Projects, Speaking)
-└── test/         # Test setup and tests
+if (isPersonalWebsite && !isFinished) {
+  ship(it);
+}
 ```
 
 ## License
 
-MIT
+MIT — because sharing is caring.

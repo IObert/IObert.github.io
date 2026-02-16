@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
   // Set base path for GitHub Pages deployment
   // Use '/' for custom domains or user sites (username.github.io)
   // Use '/repo-name/' for project sites (username.github.io/repo-name)
-  base: mode === "production" ? "/my-digital-canvas/" : "/",
+  base: mode === "production" ? "/" : "/",
   server: {
     host: "::",
     port: 8080,
