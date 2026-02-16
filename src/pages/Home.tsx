@@ -72,9 +72,9 @@ export default function Home() {
                 href="https://giphy.com/gifs/frustrated-annoyed-programming-yYSSBtDgbbRzq"
                 target="_blank"
                 rel="noopener noreferrer"
-              ><em>frustrating</em></a>) battles with CSS, I relocated to Munich, where I now work as a
+              > <em>frustrating</em></a>) battles with CSS, I relocated to Munich, where I now work as a
               Developer Evangelist at Twilio. In this role, I inspire and empower
-              developers around the world to build cloud-native apps with
+              developers around the world to build AI-infused apps with
               outstanding customer engagement. I've also spent nearly a decade
               working on enterprise frontend development and even wrote a book on
               the topic.
