@@ -4,6 +4,8 @@ import { SocialIcons } from "./SocialIcons";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { CursorTrail } from "@/components/CursorTrail";
+import { toast } from "@/hooks/use-toast";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -15,13 +17,35 @@ const navLinks = [
 export function Navigation() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [logoClickCount, setLogoClickCount] = useState(0);
+  const [cursorTrailEnabled, setCursorTrailEnabled] = useState(false);
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const newCount = logoClickCount + 1;
+    setLogoClickCount(newCount);
+
+    if (newCount === 3) {
+      setCursorTrailEnabled(true);
+      toast({
+        title: "✨ Cursor Trail Activated!",
+        description: "Move your mouse to see the magic",
+        duration: 3000,
+      });
+      setTimeout(() => setLogoClickCount(0), 5000);
+    } else if (newCount < 3) {
+      setTimeout(() => setLogoClickCount(0), 1000);
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <CursorTrail enabled={cursorTrailEnabled} />
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link 
           to="/" 
+          onClick={handleLogoClick}
           className="text-xl font-bold tracking-tight hover:text-primary transition-colors"
         >
           <span className="gradient-text">MO</span>

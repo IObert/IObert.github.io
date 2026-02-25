@@ -5,8 +5,16 @@ import { SocialIcons } from "@/components/SocialIcons";
 import { Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { useState } from "react";
 
 export default function Home() {
+  const [profileBrightness, setProfileBrightness] = useState(1);
+  const [isFlipping, setIsFlipping] = useState(false);
   return (
     <Layout>
       <Helmet>
@@ -26,9 +34,44 @@ export default function Home() {
             {/* Profile Picture */}
             <div className="flex justify-center mb-6">
               <div className="relative">
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full gradient-bg p-1">
-                  <div className="w-full h-full rounded-full bg-card flex items-center justify-center text-4xl md:text-5xl font-bold gradient-text">
-                    <img src="/Marius.jpg" alt="Marius Obert" className="w-full h-full rounded-full object-cover" />
+                <div
+                  className="w-32 h-32 md:w-40 md:h-40 rounded-full gradient-bg p-1 cursor-pointer"
+                  onMouseEnter={() => {
+                    let brightness = 1;
+                    const interval = setInterval(() => {
+                      brightness -= 0.02;
+                      if (brightness <= 0) {
+                        brightness = 0;
+                        setIsFlipping(true);
+                        setTimeout(() => {
+                          setIsFlipping(false);
+                          brightness = 1;
+                          setProfileBrightness(1);
+                          clearInterval(interval);
+                        }, 600);
+                      }
+                      setProfileBrightness(brightness);
+                    }, 20);
+                  }}
+                  onMouseLeave={() => {
+                    setProfileBrightness(1);
+                  }}
+                >
+                  <div
+                    className="w-full h-full rounded-full bg-card flex items-center justify-center text-4xl md:text-5xl font-bold gradient-text transition-transform duration-500"
+                    style={{
+                      transform: isFlipping ? 'rotateY(180deg)' : 'rotateY(0deg)',
+                      transformStyle: 'preserve-3d'
+                    }}
+                  >
+                    <img
+                      src="/Marius.jpg"
+                      alt="Marius Obert"
+                      className="w-full h-full rounded-full object-cover transition-all duration-75"
+                      style={{
+                        filter: `brightness(${profileBrightness})`,
+                      }}
+                    />
                   </div>
                 </div>
                 {/* <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-success rounded-full border-4 border-card" /> */}
