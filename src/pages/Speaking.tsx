@@ -4,12 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tag } from "@/components/Tag";
 import { talks } from "@/data/talks";
-import { Calendar, MapPin, Play, Mail, Search } from "lucide-react";
+import { Calendar, MapPin, Play, Mail, Search, ChevronDown, ChevronUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useState, useMemo } from "react";
 
 export default function Speaking() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [expandedTalks, setExpandedTalks] = useState<Set<string>>(new Set());
 
   const sortedTalks = useMemo(() => {
     let filtered = [...talks].sort((a, b) => 
@@ -67,6 +68,25 @@ export default function Speaking() {
       month: "long",
       day: "numeric",
     });
+  };
+
+  const toggleExpanded = (talkId: string) => {
+    setExpandedTalks(prev => {
+      const next = new Set(prev);
+      if (next.has(talkId)) {
+        next.delete(talkId);
+      } else {
+        next.add(talkId);
+      }
+      return next;
+    });
+  };
+
+  const getTalkId = (talk: typeof talks[0]) => `${talk.title}-${talk.date}`;
+
+  const isAbstractLong = (abstract: string) => {
+    // Consider an abstract "long" if it's more than ~200 characters or has multiple paragraphs
+    return abstract.length > 200 || abstract.includes('\n\n');
   };
 
   return (
@@ -165,9 +185,33 @@ export default function Speaking() {
                 </div>
 
                 {/* Abstract */}
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed line-clamp-3 flex-1">
-                  {talk.abstract}
-                </p>
+                <div className="mb-4 flex-1">
+                  <p 
+                    className={`text-sm text-muted-foreground leading-relaxed whitespace-pre-line ${
+                      expandedTalks.has(getTalkId(talk)) ? '' : 'line-clamp-3'
+                    }`}
+                  >
+                    {talk.abstract}
+                  </p>
+                  {isAbstractLong(talk.abstract) && (
+                    <button
+                      onClick={() => toggleExpanded(getTalkId(talk))}
+                      className="inline-flex items-center gap-1 mt-2 text-sm text-primary font-medium hover:underline focus:outline-none"
+                    >
+                      {expandedTalks.has(getTalkId(talk)) ? (
+                        <>
+                          <ChevronUp className="w-4 h-4" />
+                          Read less
+                        </>
+                      ) : (
+                        <>
+                          <ChevronDown className="w-4 h-4" />
+                          Read more
+                        </>
+                      )}
+                    </button>
+                  )}
+                </div>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-1 mb-4">
