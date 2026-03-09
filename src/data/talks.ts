@@ -13,6 +13,38 @@ export interface Talk {
 
 export const talks: Talk[] = [
   {
+    title: "Unternehmensübernahme: Finanzierung ohne Venture Capital",
+    event: "Cash and Code",
+    eventUrl: "https://open.spotify.com/show/0pVDQxkINI9yB9MDhmuTqN",
+    location: "Online",
+    date: "2026-03-02",
+    abstract: "In dieser Folge von Cash and Code sprechen wir über den klassischen Weg der Unternehmensnachfolge am Beispiel eines Elektrobetriebs im Schwarzwald. Wir klären, wie man ein bestehendes Unternehmen realistisch bewertet, wie ein fairer Kaufpreis entsteht und wie sich die Finanzierung aus Eigenkapital, Bankkredit und Fördermitteln zusammensetzt. Außerdem betrachten wir den Worst Case und die Haftungsfrage und erklären in der Rubrik 'Hä? Was isch des?' die Begriffe Bürgschaftsbank, Cashflow und Goodwill.",
+    recordingUrl: "https://open.spotify.com/episode/4ZR9oavudHFDZt2hcQ4cYU",
+    tags: ["Podcast", "Unternehmensnachfolge", "Finanzierung", "KMU", "Cashflow"],
+    language: "de",
+    isPodcast: true,
+  },
+  {
+    title: "Vom Sicherheitsfaktor zum Angriffsvektor: Das Paradox der SMS-2FA",
+    event: "MD DevDays",
+    eventUrl: "https://www.md-devdays.de/act-details/1000851?tabIndex=1&preserveScroll=true",
+    location: "Magdeburg, Germany",
+    date: "2026-05-19",
+    abstract: "SMS war einst das Rückgrat digitaler Sicherheit, doch heute wird derselbe Kanal für Betrug missbraucht. Spam- und Phishing-Kampagnen untergraben das Vertrauen in Telekommunikation. Dieser Vortrag zeigt, wie sich Telefonbetrug entwickelt hat, warum klassische Abwehrmechanismen nicht mehr genügen und welche neuen, verifizierten Kanäle Vertrauen zurückbringen können.",
+    tags: ["Security", "SMS", "2FA", "Phishing", "Trust"],
+    language: "de",
+  },
+  {
+    title: "Sprachinterfaces bauen: Zwischen LLM-Hype und Realität",
+    event: "EnterJS: Integrate AI",
+    eventUrl: "https://enterjs.de/veranstaltung-88203-se-0-sprachinterfaces-bauen-zwischen-llm-hype-und-realitaet.html",
+    location: "Online",
+    date: "2026-04-28",
+    abstract: "Sprache ist kein Feature, das man per Button oder Eingabefeld aktiviert. Sie erfordert einen von Grund auf neu gedachten User Flow. Sprachinterfaces können als Stand-alone-Lösung funktionieren, optional neben klassischen Formularen eingesetzt werden oder als hybride Kombination aus beidem. Dieser Vortrag zeigt praxisnah, was gängige Modelle heute bereits leisten und wo ihre Grenzen liegen. Themen wie Turn-Taking, Pausen und Unterbrechungen müssen Entwicklerinnen und Entwickler bewusst gestalten. Der Talk trennt klar zwischen LLM-Hype und technischer Realität und zeigt, welche Probleme heute lösbar sind und welche noch offen bleiben.",
+    tags: ["KI", "Sprachinterfaces", "LLM", "UX", "Voice"],
+    language: "de",
+  },
+  {
     title: "Von der Idee zum Milliarden-Startup: Wer finanziert Tech Start Up‘s?",
     event: "Cash and Code",
     eventUrl: "https://open.spotify.com/show/0pVDQxkINI9yB9MDhmuTqN",
