@@ -55,6 +55,18 @@ export default function Speaking() {
           return true;
         }
 
+        // Check slides availability and path
+        if (talk.slidesPath) {
+          const normalizedSlidesPath = talk.slidesPath.toLowerCase();
+          if (normalizedSlidesPath.includes(term)) {
+            return true;
+          }
+
+          if (["slide", "slides", "pdf", "deck"].includes(term)) {
+            return true;
+          }
+        }
+
         return false;
       });
     });
@@ -130,7 +142,7 @@ export default function Speaking() {
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <Input
                 type="text"
-                placeholder="Search talks by title, conference, location, year, month, language, or topic..."
+                placeholder="Search talks by title, conference, location, year, month, language, topic, or slides..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-12 h-12 text-base"
