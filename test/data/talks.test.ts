@@ -20,6 +20,13 @@ describe('Talks Logical Contradictions', () => {
     expect(invalid.length).toBe(0);
   });
 
+  it('should not allow invalid slides paths', () => {
+    const invalid = talks.filter(
+      (talk: any) => talk.slidesPath && !/^slides\/.+\.pdf$/i.test(talk.slidesPath)
+    );
+    expect(invalid.length).toBe(0);
+  });
+
   it('should not allow future dates in the past', () => {
     const now = new Date();
     const invalid = talks.filter((talk: any) => {

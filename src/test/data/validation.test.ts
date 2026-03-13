@@ -112,6 +112,14 @@ describe("Data Validation", () => {
       });
     });
 
+    it("all slides paths are valid when present", () => {
+      talks.forEach((talk) => {
+        if (talk.slidesPath) {
+          expect(talk.slidesPath).toMatch(/^slides\/.+\.pdf$/i);
+        }
+      });
+    });
+
     it("talk title+date combinations are unique", () => {
       const keys = talks.map(talk => `${talk.title}-${talk.date}`);
       const uniqueKeys = new Set(keys);

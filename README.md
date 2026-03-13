@@ -18,6 +18,22 @@ Built with React, TypeScript, Tailwind, and... just kidding. Built with love and
 
 React · TypeScript · Vite · Tailwind CSS · shadcn/ui · Vitest · GitHub Pages
 
+## Adding Talk Slides (PDF)
+
+- Put slide files in `public/slides/<year>/`, for example `public/slides/2026/WebDevCon.pdf`.
+- In `src/data/talks.ts`, add `slidesPath` to the talk item using a public-relative path, e.g. `slides/2026/WebDevCon.pdf`.
+- The Speaking page renders this as a `View Slides (PDF)` link automatically.
+
+Example:
+
+```ts
+{
+  title: "Your Talk",
+  // ...other fields
+  slidesPath: "slides/2026/your-talk.pdf",
+}
+```
+
 ## Philosophy
 
 ```

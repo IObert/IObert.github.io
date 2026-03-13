@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tag } from "@/components/Tag";
 import { talks } from "@/data/talks";
-import { Calendar, MapPin, Play, Mail, Search, ChevronDown, ChevronUp } from "lucide-react";
+import { Calendar, MapPin, Play, Mail, Search, ChevronDown, ChevronUp, FileText } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { useState, useMemo } from "react";
 
@@ -87,6 +87,11 @@ export default function Speaking() {
   const isAbstractLong = (abstract: string) => {
     // Consider an abstract "long" if it's more than ~200 characters or has multiple paragraphs
     return abstract.length > 200 || abstract.includes('\n\n');
+  };
+
+  const getSlidesUrl = (slidesPath: string) => {
+    const normalizedPath = slidesPath.replace(/^\/+/, "");
+    return `${import.meta.env.BASE_URL}${normalizedPath}`;
   };
 
   return (
@@ -220,18 +225,33 @@ export default function Speaking() {
                   ))}
                 </div>
 
-                {/* Recording Link */}
-                {talk.recordingUrl && (
+                {/* Links */}
+                {(talk.recordingUrl || talk.slidesPath) && (
                   <div className="mt-auto pt-4 border-t border-border">
-                    <a
-                      href={talk.recordingUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-sm text-primary font-medium hover:underline"
-                    >
-                      <Play className="w-4 h-4" />
-                      {talk.isPodcast ? "Listen to podcast" : "Watch Recording"}
-                    </a>
+                    <div className="flex flex-col gap-2">
+                      {talk.recordingUrl && (
+                        <a
+                          href={talk.recordingUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-sm text-primary font-medium hover:underline"
+                        >
+                          <Play className="w-4 h-4" />
+                          {talk.isPodcast ? "Listen to podcast" : "Watch Recording"}
+                        </a>
+                      )}
+                      {talk.slidesPath && (
+                        <a
+                          href={getSlidesUrl(talk.slidesPath)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-sm text-primary font-medium hover:underline"
+                        >
+                          <FileText className="w-4 h-4" />
+                          View Slides
+                        </a>
+                      )}
+                    </div>
                   </div>
                 )}
               </Card>
