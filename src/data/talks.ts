@@ -171,6 +171,16 @@ export const talks: Talk[] = [
     language: "en",
   },
   {
+    title: "Raising the Bar for Chatbots: AI-Powered Upgrades for Legacy Bots",
+    event: "SIGNAL 2025",
+    eventUrl: "https://signal.twilio.com/",
+    location: "San Francisco, USA",
+    date: "2025-05-15",
+    abstract: "The rise of ChatGPT has set new standards for chatbot interactions, and users now expect dynamic, personalized, and intelligent responses. Many older bots simply cannot keep up. In this talk, we show how Twilio AI Assistants can not only power new bots but also transform existing chatbots into smarter, more responsive systems. With this transformation, you can unlock features like multilingual support, suggestions, and recommendations at no extra cost, ensuring your chatbot meets modern demands without starting from scratch.",
+    tags: ["AI", "Chatbots", "Twilio", "Conversational AI"],
+    language: "en",
+  },
+  {
     title: "Coding at Warp Speed: The AI Revolution in Full-Stack Development",
     event: "DevTalks",
     eventUrl: "https://www.devtalks.ro/7-devtalks-2024#agenda",
