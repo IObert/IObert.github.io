@@ -14,6 +14,18 @@ export interface Talk {
 
 export const talks: Talk[] = [
   {
+    title: "Job Scamming: Vom Nebenjob zur Geldwaeschefalle",
+    event: "Cash and Code",
+    eventUrl: "https://open.spotify.com/show/0pVDQxkINI9yB9MDhmuTqN",
+    location: "Online",
+    date: "2026-04-06",
+    abstract: "Ein vermeintlich harmloser Nebenjob und ploetzlich laeuft Geldwaesche ueber das eigene Konto. In dieser Folge sprechen Sebastian und ich darueber, wie Job Scamming funktioniert, warum Social Engineering oft einfacher auszunutzen ist als technische Sicherheitsluecken und wie Menschen schrittweise in solche Situationen geraten, ohne es zu merken. Genau darum geht es bei Cash and Code: finanzieller Schaden und digitale Naivitaet, die gezielt ausgenutzt wird. Ausserdem geben wir konkrete Tipps, wie ihr euch im Alltag besser schuetzen koennt.",
+    recordingUrl: "https://open.spotify.com/episode/44Wdxp44Pfsnhkq8ttlanF",
+    tags: ["Podcast", "Job Scamming", "Social Engineering", "Geldwaesche", "Sicherheit"],
+    language: "de",
+    isPodcast: true,
+  },
+  {
     title: "Unternehmensübernahme: Finanzierung ohne Venture Capital",
     event: "Cash and Code",
     eventUrl: "https://open.spotify.com/show/0pVDQxkINI9yB9MDhmuTqN",
