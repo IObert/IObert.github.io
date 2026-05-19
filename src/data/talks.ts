@@ -14,6 +14,18 @@ export interface Talk {
 
 export const talks: Talk[] = [
   {
+    title: "Ein Tag ohne VISA - wie abhängig ist unser Bezahlen?",
+    event: "Cash and Code",
+    eventUrl: "https://open.spotify.com/show/0pVDQxkINI9yB9MDhmuTqN",
+    location: "Online",
+    date: "2026-05-19",
+    abstract: "Bargeldloses Bezahlen ist in den letzten Jahren immer einfacher geworden und aus unserem Alltag kaum noch wegzudenken. Doch wie funktioniert es eigentlich im Hintergrund?\n\nIn dieser Folge werfen wir einen Blick hinter die Kulissen von Girocard, Visa und PayPal:\n\nWarum sind wir so abhängig von US-Anbietern? Und gibt es europäische Alternativen?\n\nEine Folge über Alltag, Kosten und die Macht hinter unserem Bezahlsystem.",
+    recordingUrl: "https://open.spotify.com/episode/3aUte84RLt660angTJnPXS",
+    tags: ["Podcast", "Bezahlsystem", "Visa", "Girocard", "PayPal"],
+    language: "de",
+    isPodcast: true,
+  },
+  {
     title: "Cybercrime erklärt: Job Scamming, Social Engineering & Identitätsmissbrauch",
     event: "Cash and Code",
     eventUrl: "https://open.spotify.com/show/0pVDQxkINI9yB9MDhmuTqN",
