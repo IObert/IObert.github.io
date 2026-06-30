@@ -6,6 +6,8 @@ export interface Talk {
   date: string;
   abstract: string;
   recordingUrl?: string;
+  spotifyId?: string;
+  episodeNumber?: number;
   slidesPath?: string;
   tags: string[];
   language: "en" | "de";
@@ -14,6 +16,20 @@ export interface Talk {
 
 export const talks: Talk[] = [
   {
+    title: "Polymarket: Wetten auf die Zukunft?",
+    event: "Cash and Code",
+    eventUrl: "https://open.spotify.com/show/0pVDQxkINI9yB9MDhmuTqN",
+    location: "Online",
+    date: "2026-06-21",
+    abstract: "Was passiert, wenn nicht Aktien, sondern Ereignisse gehandelt werden? Am Beispiel des SpaceX-IPO schauen wir uns an, wie Prediction Markets funktionieren, welche Chancen sie bieten und wo Manipulation, Insiderwissen und Regulierung zum Problem werden. Ist Polymarket ein neuer Finanzmarkt, eine spannende Informationsquelle oder am Ende doch nur Glücksspiel?",
+    recordingUrl: "https://open.spotify.com/episode/3IO6QVJVJwYxZaHsYpjqEN",
+    spotifyId: "3IO6QVJVJwYxZaHsYpjqEN",
+    episodeNumber: 12,
+    tags: ["Podcast", "Polymarket", "Prediction Markets", "Regulierung", "Finanzmarkt"],
+    language: "de",
+    isPodcast: true,
+  },
+  {
     title: "Ein Tag ohne VISA - wie abhängig ist unser Bezahlen?",
     event: "Cash and Code",
     eventUrl: "https://open.spotify.com/show/0pVDQxkINI9yB9MDhmuTqN",
@@ -21,6 +37,8 @@ export const talks: Talk[] = [
     date: "2026-05-19",
     abstract: "Bargeldloses Bezahlen ist in den letzten Jahren immer einfacher geworden und aus unserem Alltag kaum noch wegzudenken. Doch wie funktioniert es eigentlich im Hintergrund?\n\nIn dieser Folge werfen wir einen Blick hinter die Kulissen von Girocard, Visa und PayPal:\n\nWarum sind wir so abhängig von US-Anbietern? Und gibt es europäische Alternativen?\n\nEine Folge über Alltag, Kosten und die Macht hinter unserem Bezahlsystem.",
     recordingUrl: "https://open.spotify.com/episode/3aUte84RLt660angTJnPXS",
+    spotifyId: "3aUte84RLt660angTJnPXS",
+    episodeNumber: 11,
     tags: ["Podcast", "Bezahlsystem", "Visa", "Girocard", "PayPal"],
     language: "de",
     isPodcast: true,
@@ -33,6 +51,8 @@ export const talks: Talk[] = [
     date: "2026-04-06",
     abstract: "Ein vermeintlich harmloser Nebenjob und ploetzlich laeuft Geldwaesche ueber das eigene Konto. In dieser Folge sprechen Sebastian und ich darueber, wie Job Scamming funktioniert, warum Social Engineering oft einfacher auszunutzen ist als technische Sicherheitsluecken und wie Menschen schrittweise in solche Situationen geraten, ohne es zu merken. Genau darum geht es bei Cash and Code: finanzieller Schaden und digitale Naivitaet, die gezielt ausgenutzt wird. Ausserdem geben wir konkrete Tipps, wie ihr euch im Alltag besser schuetzen koennt.",
     recordingUrl: "https://open.spotify.com/episode/44Wdxp44Pfsnhkq8ttlanF",
+    spotifyId: "44Wdxp44Pfsnhkq8ttlanF",
+    episodeNumber: 10,
     tags: ["Podcast", "Job Scamming", "Social Engineering", "Geldwäsche", "Sicherheit"],
     language: "de",
     isPodcast: true,
@@ -45,6 +65,8 @@ export const talks: Talk[] = [
     date: "2026-03-02",
     abstract: "In dieser Folge von Cash and Code sprechen wir über den klassischen Weg der Unternehmensnachfolge am Beispiel eines Elektrobetriebs im Schwarzwald. Wir klären, wie man ein bestehendes Unternehmen realistisch bewertet, wie ein fairer Kaufpreis entsteht und wie sich die Finanzierung aus Eigenkapital, Bankkredit und Fördermitteln zusammensetzt. Außerdem betrachten wir den Worst Case und die Haftungsfrage und erklären in der Rubrik 'Hä? Was isch des?' die Begriffe Bürgschaftsbank, Cashflow und Goodwill.",
     recordingUrl: "https://open.spotify.com/episode/4ZR9oavudHFDZt2hcQ4cYU",
+    spotifyId: "4ZR9oavudHFDZt2hcQ4cYU",
+    episodeNumber: 9,
     tags: ["Podcast", "Unternehmensnachfolge", "Finanzierung", "KMU", "Cashflow"],
     language: "de",
     isPodcast: true,
@@ -79,8 +101,12 @@ export const talks: Talk[] = [
     date: "2026-02-01",
     abstract: "300 Millionen Dollar für ein KI-Startup aus dem Schwarzwald – aber wer finanziert solche Unternehmen eigentlich und wie funktioniert das im Tech-Bereich? In dieser Folge erklären wir Venture Capital, Finanzierungsrunden wie Seed, Series A und Series B sowie Exit-Strategien verständlich und praxisnah.",
     recordingUrl: "https://open.spotify.com/episode/381XdpTnf0dizGmzk62lDg",
+    spotifyId: "381XdpTnf0dizGmzk62lDg",
+    episodeNumber: 8,
     tags: ["Podcast", "Startup", "Venture Capital", "Finanzierung", "Tech"],
-    language: "de",    isPodcast: true,  },
+    language: "de",
+    isPodcast: true,
+  },
   {
     title: "Tokenisierung von Vermögenswerten",
     event: "Cash and Code",
@@ -89,6 +115,8 @@ export const talks: Talk[] = [
     date: "2026-01-02",
     abstract: "Was passiert, wenn Kunstwerke, Immobilien oder Infrastrukturprojekte digital handelbar werden? Diese Folge beleuchtet, wie Tokenisierung mit Blockchain und Smart Contracts funktioniert, welche Chancen für Anleger entstehen und wo rechtliche sowie praktische Grenzen liegen.",
     recordingUrl: "https://open.spotify.com/episode/0pZZn16RHYedZz14g0HU0M",
+    spotifyId: "0pZZn16RHYedZz14g0HU0M",
+    episodeNumber: 7,
     tags: ["Podcast", "Blockchain", "Tokenisierung", "Investments", "Finanzwelt"],
     language: "de",
     isPodcast: true,
@@ -101,6 +129,8 @@ export const talks: Talk[] = [
     date: "2025-12-01",
     abstract: "Am Beispiel eines Hauskaufs zeigen wir, wie Smart Contracts Prozesse wie Notar, Grundbuch und Treuhand teilweise digital abbilden können. Die Episode erklärt Chancen, Grenzen und den realistischen Einsatz dieser Verträge in der Praxis.",
     recordingUrl: "https://open.spotify.com/episode/0nfCeX0jmfpBpO0leDNEzo",
+    spotifyId: "0nfCeX0jmfpBpO0leDNEzo",
+    episodeNumber: 6,
     tags: ["Podcast", "Blockchain", "Smart Contracts", "Digitalisierung", "Recht"],
     language: "de",
     isPodcast: true,
@@ -113,6 +143,8 @@ export const talks: Talk[] = [
     date: "2025-11-01",
     abstract: "In dieser Folge sprechen wir über Stablecoins – digitales Geld auf der Blockchain. Wir erklären Technik, Einsatzmöglichkeiten im Zahlungsverkehr, Risiken sowie Unterschiede zum digitalen Euro und diskutieren, warum Anbieter wie PayPal, Circle oder AllUnity jetzt stark auf dieses Thema setzen.",
     recordingUrl: "https://open.spotify.com/episode/6yAZZBbcvfkU7nFv3NzV85",
+    spotifyId: "6yAZZBbcvfkU7nFv3NzV85",
+    episodeNumber: 5,
     tags: ["Podcast", "Blockchain", "Stablecoins", "Zahlungsverkehr", "Digitaler Euro"],
     language: "de",
     isPodcast: true,
@@ -125,6 +157,8 @@ export const talks: Talk[] = [
     date: "2025-10-01",
     abstract: "Diese Folge erklärt die Grundlagen der Blockchain verständlich: von Transaktionen und Blöcken über Kryptografie bis zu Wallets und privaten Schlüsseln. Außerdem betrachten wir, wie sich klassische Bankenwelt und Blockchain zunehmend annähern.",
     recordingUrl: "https://open.spotify.com/episode/2d954wxIsySy0tfnMO55CS",
+    spotifyId: "2d954wxIsySy0tfnMO55CS",
+    episodeNumber: 4,
     tags: ["Podcast", "Blockchain", "Wallet", "Kryptografie", "Finanzwelt"],
     language: "de",
     isPodcast: true,
@@ -147,6 +181,8 @@ export const talks: Talk[] = [
     date: "2025-09-04",
     abstract: "Wie weit hilft KI heute in der Finanzberatung – und wo bleiben menschliche Erfahrung, Kontext und Vertrauen unverzichtbar? Wir sprechen über Grenzen aktueller Tools, typische Denkfehler bei Geldanlage und wie sich Beratung im KI-Zeitalter neu erfindet.",
     recordingUrl: "https://open.spotify.com/episode/2JkjEqhyMp3YCW59BlQlDI",
+    spotifyId: "2JkjEqhyMp3YCW59BlQlDI",
+    episodeNumber: 3,
     tags: ["Podcast", "KI", "Finanzberatung", "Behavioral Finance", "Investments"],
     language: "de",
     isPodcast: true,
@@ -159,6 +195,8 @@ export const talks: Talk[] = [
     date: "2025-08-02",
     abstract: "In der ersten Folge geht es um den praktischen Einsatz von KI im Alltag, in Unternehmen und in der Finanzwelt. Wir ordnen Chancen und Grenzen ein und klären, wo echter Mehrwert entsteht – und wo KI vor allem Buzzword bleibt.",
     recordingUrl: "https://open.spotify.com/episode/2TtStn2O1zY8RSMaNsjkLl",
+    spotifyId: "2TtStn2O1zY8RSMaNsjkLl",
+    episodeNumber: 2,
     tags: ["Podcast", "KI", "Finanzwelt", "Digitalisierung", "Technologie"],
     language: "de",
     isPodcast: true,
