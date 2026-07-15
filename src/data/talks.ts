@@ -493,6 +493,7 @@ export const talks: Talk[] = [
     event: "WebDevCon 2026",
     eventUrl: "https://webdevcon.nl/schedule-2026/",
     location: "Amsterdam, Netherlands",
+    recordingUrl: "https://webdevcon.nl/session/your-bank-or-a-scammer-the-blurred-lines-of-phone-trust/",
     date: "2026-03-13",
     abstract: `SMS was once the trusted backbone of digital security, powering two-factor authentication and one-time passwords. But over time, the same channel became a favorite tool for fraud. Spam texts, spoofed calls, and large-scale phishing campaigns now exploit global telecom networks, leaving people uncertain whether the message on their phone is legitimate or a scam designed to steal their money.\n\nThis talk examines how phone fraud has evolved and what happens behind the scenes when attackers attempt to exploit communication systems. We’ll explore how new secure and verified channels are emerging to counter these threats, and how developers can apply them to restore trust between applications and their users.\n\nYou will learn how fraudsters operate, why traditional defenses fall short, and what practical mechanisms can be used to build safer communication workflows.`,
     slidesPath: "slides/2026/WebDevCon_2026.pdf",
