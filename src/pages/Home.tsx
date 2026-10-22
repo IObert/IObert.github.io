@@ -65,8 +65,11 @@ export default function Home() {
                     }}
                   >
                     <img
-                      src="/Marius.jpg"
+                      src="/Marius_2-0.webp"
                       alt="Marius Obert"
+                      width={480}
+                      height={480}
+                      fetchPriority="high"
                       className="w-full h-full rounded-full object-cover transition-all duration-75"
                       style={{
                         filter: `brightness(${profileBrightness})`,
