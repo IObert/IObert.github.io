@@ -55,7 +55,7 @@ describe("Data Validation", () => {
       coding.forEach((project) => {
         expect(project.title).toBeTruthy();
         expect(project.description).toBeTruthy();
-        expect(project.githubUrl).toBeTruthy();
+        expect(project.githubUrl || project.liveUrl).toBeTruthy();
         expect(project.techStack).toBeDefined();
         expect(Array.isArray(project.techStack)).toBe(true);
         expect(project.techStack.length).toBeGreaterThan(0);
@@ -67,7 +67,9 @@ describe("Data Validation", () => {
 
     it("all project URLs are valid", () => {
       coding.forEach((project) => {
-        expect(() => new URL(project.githubUrl)).not.toThrow();
+        if (project.githubUrl) {
+          expect(() => new URL(project.githubUrl)).not.toThrow();
+        }
         if (project.liveUrl) {
           expect(() => new URL(project.liveUrl)).not.toThrow();
         }
@@ -76,7 +78,9 @@ describe("Data Validation", () => {
 
     it("all GitHub URLs point to GitHub", () => {
       coding.forEach((project) => {
-        expect(project.githubUrl).toMatch(/^https:\/\/github\.com\//);
+        if (project.githubUrl) {
+          expect(project.githubUrl).toMatch(/^https:\/\/github\.com\//);
+        }
       });
     });
   });

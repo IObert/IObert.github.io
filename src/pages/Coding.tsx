@@ -29,7 +29,7 @@ export default function Coding() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {coding.map((project, index) => (
               <Card 
-                key={project.githubUrl} 
+                key={project.title}
                 className="flex flex-col p-6 hover-lift animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
@@ -78,17 +78,19 @@ export default function Coding() {
                 
                 {/* Links */}
                 <div className="flex gap-2 mt-auto pt-4 border-t border-border">
-                  <Button asChild variant="outline" size="sm" className="flex-1 gap-2">
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4" />
-                      GitHub
-                    </a>
-                  </Button>
+                  {project.githubUrl && (
+                    <Button asChild variant="outline" size="sm" className="flex-1 gap-2">
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4" />
+                        GitHub
+                      </a>
+                    </Button>
+                  )}
                   {project.liveUrl && (
                     <Button asChild size="sm" className="flex-1 gap-2">
                       <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-4 h-4" />
-                        Live Demo
+                        {project.githubUrl ? "Live Demo" : "Visit Website"}
                       </a>
                     </Button>
                   )}

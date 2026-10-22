@@ -16,6 +16,25 @@ export interface Talk {
 
 export const talks: Talk[] = [
   {
+    title: "The Call Ended. The Conversation Didn't: Voice and Text Agents in One Thread",
+    event: "LeadDev Berlin 2026",
+    eventUrl: "https://leaddev.com/leaddev-berlin/",
+    location: "Berlin, Germany",
+    // Conference start date; the demo's exact day is yet to be confirmed.
+    date: "2026-11-09",
+    abstract: `Your customer calls your voice agent on Monday and texts your support agent on Wednesday. For them, that's one conversation. For most stacks, it's two systems with two transcripts, held together by glue code and webhooks someone has to maintain.
+
+It doesn't have to be that way. In this live demo, you'll see how Twilio Agent Connect puts voice and text agents into a single conversation thread.
+
+Every call and every message lands in the exact same history, and because every interaction naturally converges in one place, it becomes the ideal inflection point to understand customer needs in real time and extract those insights into a single, persistent profile.
+
+This architecture avoids locking you into proprietary, platform-baked AI. You bring your own LLM and your own agent logic, while Twilio handles the heavy lifting of real-time multimodal communication.
+
+Whether you lead a team that ships agents or are about to start, you'll leave knowing which parts are worth building yourself and which aren't.`,
+    tags: ["Voice", "Messaging", "SMS", "Agents", "LLM", "Twilio", "Realtime", "Multimodal"],
+    language: "en",
+  },
+  {
     title: "Polymarket: Wetten auf die Zukunft?",
     event: "Cash and Code",
     eventUrl: "https://open.spotify.com/show/0pVDQxkINI9yB9MDhmuTqN",

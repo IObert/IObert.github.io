@@ -10,6 +10,15 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    title: "Building a Multi-Channel AI Agent with Twilio Conversations and eve",
+    date: "2026-10-08",
+    externalUrl:
+      "https://www.twilio.com/en-us/blog/developers/building-agent-twilio-conversations-eve",
+    tags: ["AI", "Agents", "Twilio Conversations", "eve", "SMS", "WhatsApp", "Memory"],
+    publication: "Twilio Blog",
+    language: "en",
+  },
+  {
     title:
       "Rich Messages, Richer Experiences: Monetizing Chatbots on RCS and WhatsApp",
     date: "2026-02-12",

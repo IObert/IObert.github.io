@@ -4,12 +4,42 @@ export interface Coding {
   techStack: string[];
   status: "active" | "archived";
   role: ("creator" | "maintainer" | "contributor")[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
   tags: string[];
 }
 
 export const coding: Coding[] = [
+  {
+    title: "Portrait Studio",
+    description:
+      "An event portrait studio where attendees send selfies over WhatsApp or SMS, choose a style, and receive AI-generated portraits with share links and optional booth printing.",
+    techStack: ["Next.js", "Node.js", "Twilio", "OpenAI", "Azure Blob Storage"],
+    status: "active",
+    role: ["creator", "maintainer"],
+    githubUrl: "https://github.com/IObert/portrait-studio",
+    tags: ["AI", "Portraits", "Events", "WhatsApp", "SMS"],
+  },
+  {
+    title: "Twilio Verify Lockboxes",
+    description:
+      "An event game where players verify their identity via SMS, voice, or WhatsApp, solve a timed Wordle-style puzzle, and unlock a physical prize box with igloohome smart locks.",
+    techStack: ["Next.js", "Twilio Verify", "Twilio Sync", "Twilio Paste", "igloohome"],
+    status: "active",
+    role: ["maintainer"],
+    githubUrl: "https://github.com/IObert/twilio-verify-lockboxes",
+    tags: ["Events", "Gamification", "Identity Verification", "IoT"],
+  },
+  {
+    title: "Dress Rehearsal",
+    description:
+      "A personal wardrobe concierge on WhatsApp. Send photos of your clothes, share your plans, and get outfit suggestions and previews that consider the occasion and weather. Currently in beta and not yet open source; the bot only replies to approved senders. Visit the website to explore the project.",
+    techStack: ["Next.js", "WhatsApp"],
+    status: "active",
+    role: ["creator", "maintainer"],
+    liveUrl: "https://dress-rehearsal-webapp.vercel.app",
+    tags: ["Fashion", "Wardrobe", "Chatbot", "Beta"],
+  },
   {
     title: "Wheel of Twilio",
     description:

@@ -34,9 +34,9 @@ describe('Coding Projects Logical Contradictions', () => {
     expect(contradictions.length).toBe(0);
   });
 
-  it('should fail if a project has a maintainer but no githubUrl', () => {
+  it('should fail if a project has no repository or website link', () => {
     const contradictions = codingProjects.filter(
-      (project: any) => project.role.includes('maintainer') && (!project.githubUrl || project.githubUrl.trim() === '')
+      (project: any) => !project.githubUrl?.trim() && !project.liveUrl?.trim()
     );
     expect(contradictions.length).toBe(0);
   });
@@ -52,5 +52,5 @@ describe('Coding Projects Logical Contradictions', () => {
 // 1. A project with no roles at all.
 // 2. A project with status 'active' but no 'creator' or 'maintainer'.
 // 3. A project with an invalid status or role value.
-// 4. A project with a maintainer but no githubUrl.
+// 4. A project with no repository or website link.
 // 5. Duplicate project titles.
