@@ -18,6 +18,21 @@ Built with React, TypeScript, Tailwind, and... just kidding. Built with love and
 
 React · TypeScript · Vite · Tailwind CSS · shadcn/ui · Vitest · GitHub Pages
 
+## Development
+
+Use the Node version in `.nvmrc` (currently 26.12.1) and pnpm 11.1.3:
+
+```sh
+nvm use
+corepack enable
+pnpm install --frozen-lockfile
+pnpm dev
+```
+
+Before deploying, run `pnpm typecheck`, `pnpm lint`, `pnpm test`, and `pnpm build`.
+The GitHub Pages workflow runs these checks on the latest stable Node release before deployment.
+TypeScript 7 runs the type checks; the TypeScript 6 compatibility package provides the API required by ESLint.
+
 ## Adding Talk Slides (PDF)
 
 - Put slide files in `public/slides/<year>/`, for example `public/slides/2026/WebDevCon.pdf`.

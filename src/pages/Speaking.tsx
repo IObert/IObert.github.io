@@ -213,7 +213,7 @@ export default function Speaking() {
                   {isAbstractLong(talk.abstract) && (
                     <button
                       onClick={() => toggleExpanded(getTalkId(talk))}
-                      className="inline-flex items-center gap-1 mt-2 text-sm text-primary font-medium hover:underline focus:outline-none"
+                      className="inline-flex items-center gap-1 mt-2 text-sm text-primary font-medium hover:underline focus:outline-hidden"
                     >
                       {expandedTalks.has(getTalkId(talk)) ? (
                         <>

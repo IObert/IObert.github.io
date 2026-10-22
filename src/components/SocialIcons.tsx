@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin, BookOpen } from "lucide-react";
+import { FaGithub as Github, FaTwitter as Twitter, FaLinkedinIn as Linkedin } from "react-icons/fa";
 
 interface SocialIconsProps {
   className?: string;

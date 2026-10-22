@@ -1,9 +1,10 @@
+import { FaGithub as Github } from "react-icons/fa";
 import { Layout } from "@/components/Layout";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tag } from "@/components/Tag";
 import { coding } from "@/data/coding";
-import { Github, ExternalLink, CheckCircle, Archive, User } from "lucide-react";
+import { ExternalLink, CheckCircle, Archive, User } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 export default function Coding() {
