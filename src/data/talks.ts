@@ -20,7 +20,7 @@ export const talks: Talk[] = [
     event: "LeadDev Berlin 2026",
     eventUrl: "https://leaddev.com/leaddev-berlin/",
     location: "Berlin, Germany",
-    // Conference start date; the demo's exact day is yet to be confirmed.
+    slidesPath: "slides/2026/LeadDev_2026.pdf",
     date: "2026-11-09",
     abstract: `Your customer calls your voice agent on Monday and texts your support agent on Wednesday. For them, that's one conversation. For most stacks, it's two systems with two transcripts, held together by glue code and webhooks someone has to maintain.
 
